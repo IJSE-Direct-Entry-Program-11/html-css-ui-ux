@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        /* Nested CSS */
+
+        /* ul{
+            & li:first-child {
+                color: red; 
+            }
+
+            & li:last-child {
+                color: blue;
+            }
+
+            & li:nth-child(3){
+                color: green;
+            }
+
+            & li:nth-last-child(3){
+                color: green;
+            }
+        } */
+
+        #ul-1 li:first-child {
+                color: red; 
+        }
+
+        #ul-1 :last-child {
+                color: blue;
+        }
+
+        #ul-1 :nth-child(3){
+                color: green;
+        }
+
+        #ul-1 :nth-last-child(3){
+                color: green;
+        }
+
+        ol :nth-child(2n+1) {
+            color: red;
+        }
+
+        #ul-2 :nth-child(odd) {
+           color: blue; 
+        }
+
+        #ul-2 :nth-child(even) {
+           color: green; 
+        }        
+    </style>
+</head>
+<body>
+    <p>
+        Navigate to: <a href="pseudo-selectors-1.html" target="_blank">Pseudo Selector 1</a><br>
+        Navigate to: <a href="pseudo-selectors-2.html" target="_blank">Pseudo Selector 2</a><br>
+        Navigate to: <a href="pseudo-selectors-3.html" target="_blank">Pseudo Selector 3</a><br>
+        Navigate to: <a href="pseudo-selectors-4.html" target="_blank">Pseudo Selector 4</a><br>
+    </p>
+    <h1>Pseudo Selectors</h1>
+    <ul id="ul-1">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ul>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ol>
+    <ul id="ul-2">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ul>    
+</body>
+</html>

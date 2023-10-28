@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #outer {
+            width: 250px;
+            height: 250px;
+            border: 5px solid blue;
+        }
+
+        .inner {
+            width: 100%;
+            height: 50%;
+            /* padding: 50px; */
+            border: 20px solid red;
+            border-top-color: red;
+            border-right-color: green;
+            border-bottom-color: black;
+            border-left-color: white
+        }
+
+        .inner:first-child {
+            background-color: lawngreen;
+        }
+
+        .inner:last-child {
+            background-color: orange;
+        }
+
+        #app-bar {
+            height: 70px;
+            background-color: green;
+            padding: 0 40px 0 40px;
+            color: white;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        p span {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+            margin: 10px;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app-bar">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro autem officia quis consectetur quasi, modi voluptas corrupti omnis soluta eos. Aliquam debitis error provident quidem sapiente dicta aliquid molestiae quaerat.
+    </div>
+    <h1>Box Model</h1>
+    <p>This is all <span>about</span> the box model
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque minima voluptates culpa laborum et quod vel saepe qui inventore? Ea soluta quas labore exercitationem, natus quo odit illum sint quam!
+    </p>    
+    <div id="outer">
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div> 
+</body>
+</html>

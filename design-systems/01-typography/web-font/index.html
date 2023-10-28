@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        @font-face {
+            font-family: 'DEP-11';
+            src: url(font/Roboto/Roboto-Regular.ttf) format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'DEP-11';
+            src: url(font/Roboto/Roboto-Thin.ttf) format('truetype');
+            font-weight: 100 300;
+        }
+        
+        @font-face {
+            font-family: 'DEP-11';
+            src: local('Times New Roman');
+            font-weight: 500 900;
+        }  
+        
+        @font-face {
+            font-family: 'DEP-11';
+            src:    url(font/Roboto/Roboto-BoldItalic.ttf) format('truetype'),
+                    url(font/Roboto/Roboto-BoldItalic.woff2) format('woff2'),
+                    url(font/Roboto/Roboto-BoldItalic.woff) format('woff');
+            font-style: italic;
+        }
+
+        h1:first-of-type {
+            font-family: 'Pacifico', cursive, sans-serif;
+        }
+
+        h1:nth-of-type(2) {
+            font-family: 'DEP-11';
+            font-style: italic;
+        }
+
+        h1:last-of-type {
+            font-family: 'DEP-11';
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Typography</h1>
+    <h1>Typography</h1>
+    <h1>Typography</h1>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligning 3</title>
+    <style>
+        #outer {
+            width: 450px;
+            height: 450px;
+            background-color: yellow;
+            position: relative; /* positioned */
+        }
+
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+
+            /* Center */
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto auto;
+
+            /* Middle Left */
+            /* top: 0;
+            bottom: 0;
+            margin: auto 0; */
+
+            /* Middle Right */
+            /* top: 0;
+            bottom: 0;
+            margin: auto 0;
+            right: 0; */
+
+            /* Top Center */
+            /* left: 0;
+            right: 0;
+            margin: 0 auto; */
+
+            /* Bottom Center */
+            /* left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0; */
+            
+            /* Top Left */
+            /* left: 0;
+            top: 0; */
+
+            /* Top Right */
+            /* right: 0;
+            top: 0; */
+
+            /* Bottom Left */
+            /* left: 0;
+            bottom: 0; */
+
+            /* Bottom Right */
+            /* right: 0;
+            bottom: 0; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Aligning 3</h1>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>    
+</body>
+</html>

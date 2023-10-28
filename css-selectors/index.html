@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        * {
+            color: darkslateblue;
+        }
+
+        #my-id1, 
+        #my-id2 {
+            color: red;
+        }
+
+        #my-id2.my-class1 {
+            color: green;
+            text-decoration: underline;
+        }
+
+        .my-class2 {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        [title]{
+            font-style: italic;
+            color: orange;
+        }
+
+        [title="Tooltip"]{
+            color: black;
+        }
+
+        p {
+            color: black;
+            background-color: lightgray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 title="Hello I am a tooltip">CSS Selectors</h1>
+    <ul>
+        <li>Universal Selector (*)</li>
+        <li id="my-id1">ID Selector (#)</li>
+        <li id="my-id2" class="my-class1">Class Selector (.)</li>
+        <li title="Tooltip" class="my-class1 my-class2">Attribute Selector ([attr="value"])</li>
+        <li class="my-class1 my-class2">Type Selector (tagname)</li>
+        <li>
+            <a href="pseudo-selectors.html" target="_blank">
+                Pseudo Selectors
+            </a>
+            <ul>
+                <li>Pseudo Class Selectors (:)</li>
+                <li>Pseudo Element Selectors (::)</li>
+            </ul>
+        </li>
+    </ul>
+    <p><a href="specificity-algorith.html">
+        Compound Selector</a> = Combine Multiple Selectors</p>
+    <h1>CSS Combinators</h1>
+    <ul>
+        <li>Descendant Combinator (whitespace)</li>
+        <li>Child Combinator (>)</li>
+        <li>Adjacent (Next) Sibiling Combinator (+)</li>
+        <li>General (Subsequent) Sibiling Combintaor (~)</li>
+    </ul>
+    <p>Complex Selector = Selectors + Combinators</p>
+    <p>Grouping Selector = Comma Sepearted Selector List</p>
+    <h1>CSS Seperators</h1>
+    <p>Namespace Seperator (|)</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors 1</title>
+    <style>
+        div :first-child {
+            color: red;
+        }
+        ul li:first-child {
+            color :red;
+        }
+        div h3:last-child {
+           color: blue; 
+        }
+        div :not(p){
+            color: green;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Selectors 1</h1>
+    <div>
+        <p>Paragraph1</p>
+        <h3>Heading1</h3>
+        <p>Paragraph2</p>
+        <h3>Heading2</h3>
+        <p>Paragraph3</p>
+        <h3>Heading3</h3>
+    </div>
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+    </ul>
+</body>
+</html>

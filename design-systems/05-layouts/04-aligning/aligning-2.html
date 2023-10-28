@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligning 2</title>
+    <style>
+        #outer {
+            width: 450px;
+            height: 450px;
+            background-color: yellow;
+            position: relative; /* positioned */
+        }
+
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute; /* absolute or relative */
+            
+            /* Top Center */
+            /* left: 50%;
+            transform: translateX(-50%); */
+
+            /* Top Right */
+            /* left: 100%;
+            transform: translateX(-100%); */
+
+            /* Middle Left */
+            /* top: 50%;
+            transform: translateY(-50%); */
+
+            /* Center */
+            /* left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); */
+
+            /* Middle Right */
+            /* left: 100%;
+            top: 50%;
+            transform: translate(-100%, -50%); */
+
+            /* Bottom Left */
+            /* top: 100%;
+            transform: translateY(-100%); */
+
+            /* Bottom Center */
+            /* top: 100%;
+            left: 50%;
+            transform: translate(-50%, -100%); */
+
+            /* Bottom Right */
+            left: 100%;
+            top: 100%;
+            transform: translate(-100%, -100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Aligning 2</h1>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>    
+</body>
+</html>

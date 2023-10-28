@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        #static {
+            left: -100px;
+            top: 50px;
+            bottom: 100px;
+        }
+
+        #relative{
+            position: relative;
+            background-color: yellow;
+            right: -120px;
+            bottom: 120px;
+        }
+
+        #outer {
+            background-color: yellow;
+            width: 350px;
+            height: 350px;
+            color: white;
+            position: relative;
+        }
+
+        #inner {
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            /* position: relative; */
+        }
+
+        #inner-inner {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+
+        #my-ad{
+            background-color: lime;
+            padding: 10px;
+            border: 1px solid black;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0px;
+            /* height: 350px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning</h1>
+    <ul>
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li><a href="sticky.html">Sticky (CSS3)</a></li>
+        <li><a href="sticky2.html">Sticky (CSS3)</a></li>
+    </ul>
+    <h2 id="static">Static Position</h2>
+    <h2 id="relative">Relative Position</h2>
+    <div id="outer">
+        <div id="inner">
+            <div id="inner-inner">INNER INNER</div>
+            <p>I am a paragraph</p>
+        </div>
+    </div>
+    <div id="my-ad">
+        <h2>You have won $5000, Click to Claim!</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odio in praesentium, harum quo quasi accusantium eaque laudantium sint explicabo iusto assumenda. Perspiciatis incidunt nobis dolore aspernatur non vitae ipsum?</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificitiy Algorithm</title>
+    <style>
+        #my-id.my-class1.my-class2 {
+            color: blue;      /* 1-2-0 */
+        }
+        #my-id.my-class1 {      /* 1-1-0 */
+            color: red;
+        }
+        #my-id{
+            color: green;     /* 1-0-0  */
+        }
+        body p #my-id.my-class1.my-class2[title] {
+            color: aqua;      /* 1-3-2 */
+        }
+        body #my-id.my-class1.my-class2[title]{
+            color: yellow;    /* 1-3-1 */
+        }        
+    </style>
+</head>
+<body>
+    <h1>Specificitiy Algorithm</h1>
+    <p>
+        Lorem <span id="my-id" 
+                    class="my-class1 my-class2"
+                    title="Tooltip">
+                    ipsum
+                </span>
+        dolor, sit amet consectetur adipisicing elit. Fuga delectus necessitatibus dolores totam et pariatur corrupti sapiente nemo quaerat nihil unde ipsa repellat, aut sunt in iste culpa minima quis.
+    </p>
+    <textarea cols="40" rows="20">
+span {              /* 0-0-1 */
+    color: red;
+}
+
+.my-class1 {        /* 0-1-0 */
+    color: blue;
+}
+
+#my-id {            /* 1-0-0 */
+    color: aqua;
+}
+
+[title]{            /* 0-1-0 */
+    color: green;
+}
+
+.my-class2 {        /* 0-1-0 */
+    color: orangered;
+}
+    </textarea>
+</body>
+</html>

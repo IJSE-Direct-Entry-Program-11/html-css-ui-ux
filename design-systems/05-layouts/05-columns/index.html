@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            padding: 0 10px;
+        }
+
+        #container-1 {
+            background-color: yellow;
+            height: 200px;
+        }
+
+        #container-1 .col {
+            width: 33.33%;
+            height: 100%;
+        }
+
+        #container-1 .col:first-child {
+            display: inline-block;
+            background-color: red;
+        }
+
+        #container-1 .col:nth-child(2) {
+            display: inline-block;
+            background-color: green;
+        }
+
+        #container-1 .col:last-child {
+            display: inline-block;
+            background-color: blue;
+        }
+
+        #container-2 {
+            background-color: yellow;
+            margin-top: 10px;
+            height: 200px;
+        }
+
+        #container-2 .col {
+            width: 33.33%;
+            height: 100%;
+            float: right;
+        }
+
+        #container-2 .col:first-child {
+            background-color: red;
+        }
+
+        #container-2 .col:nth-child(2) {
+            background-color: green;
+        }
+
+        #container-2 .col:last-child {
+            background-color: blue;
+        }
+
+        #container-2::after{
+            content: "";
+            clear: both;
+        }
+
+        h1 span {
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            transform: rotate(-25deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Columns</h1>
+    <div id="container-1">
+        <div class="col">
+            Column1
+        </div><div class="col">
+            Column2
+        </div><div class="col">
+            Column3
+        </div>
+    </div>
+
+    <div id="container-2">
+        <div class="col">Column1</div>
+        <div class="col"></div>
+        <div class="col">Column3</div>
+        <!-- ::after -->
+    </div>
+    <h1>
+        Hello <span>Inline Block!</span>
+    </h1>
+</body>
+</html>

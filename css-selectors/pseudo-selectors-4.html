@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors 4</title>
+    <style>
+        p {
+            background-color: yellow;
+        }
+
+        p::before {
+          content: "Before the Paragraph";
+          background-color: red;
+          color: white;
+          padding: 5px;
+        }
+
+        p::after {
+            content: "After the Paragraph";
+            background-color: blue;
+            color: white;
+            padding: 5px;
+        }
+
+        p:hover::before{
+            background-color: green;
+        }
+
+        p:hover::after{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Selectors 4</h1>
+    <h2>Pseduo Elements (::)</h2>
+    <!-- ::before ❌ -->
+    <p>
+        <!-- ::before -->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores facere rem eaque temporibus esse laudantium excepturi officia nostrum nobis similique distinctio sed nemo corrupti fugiat repellat modi, quod magni ipsa!
+        <!-- ::after -->
+    </p>
+    <!-- ::after ❌ -->
+</body>
+</html>
