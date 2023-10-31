@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3 Variables</title>
+    <style>
+        :root {
+            --my-color: yellow; 
+            --my-font-size: 2rem;
+        }
+
+        h1 {
+            --my-color: lime;
+            background-color: var(--my-color);
+        }
+
+        #container {
+            --my-color: red;
+            --fsize: 3rem;
+        }
+
+        #container p > span {
+            background-color: var(--my-color);
+        }
+
+        #p-1 {
+            font-size: var(--fsize);    /* out of scope */
+            font-size: var(--my-font-size);
+            background-color: var(--my-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 3 Variables</h1>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempora porro est, placeat, suscipit rem hic omnis incidunt ipsa quisquam, distinctio ut deserunt itaque. Ducimus consequatur nulla adipisci mollitia ipsum?</p>
+        <p>Lorem <span>ipsum</span> dolor sit amet, consectetur adipisicing elit. Dicta, atque dolore. Repudiandae, consequatur! Facere repellat modi delectus quo placeat et nostrum, iste pariatur? Ullam temporibus, similique aliquid doloremque sit dolorum.</p>
+    </div>
+    <p id="p-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi veritatis labore nihil. Rerum reiciendis corrupti provident dolore suscipit inventore vel. Laudantium reprehenderit veritatis placeat modi ut, sit et enim unde?</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow in Grid Layout</title>
+    <style>
+        #container {
+            border: 5px solid black;
+            height: 400px;
+            display: grid;
+            grid-template-columns:repeat(3, 50px);
+            grid-template-rows: 50px 50px;
+        }
+
+        .box {
+            /* width: 100px;
+            height: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box" style="background-color: yellow"></div>
+        <div class="box" style="background-color: red"></div>
+        <div class="box" style="background-color: green"></div>
+        <div class="box" style="background-color: blue"></div>
+        <div class="box" style="background-color: black"></div>
+    </div>
+</body>
+</html>

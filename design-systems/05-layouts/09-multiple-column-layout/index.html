@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Column Layout</title>
+    <style>
+        #container {
+            /* column-count: 3;
+            column-width: 100px; */
+            columns: 3 100px;
+
+            column-gap: 50px;
+
+            /* column-rule-width: 5px;
+            column-rule-style: solid;
+            column-rule-color: blue; */
+            column-rule: 5px solid blue;
+        }
+
+        #container h1 {
+            column-span: all;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Multiple Column Layout</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, earum repellat, laboriosam animi dicta repellendus quas maxime sapiente quidem placeat eos. Deserunt, temporibus! Nobis quae quos, eaque iusto quidem consequatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, earum repellat, laboriosam animi dicta repellendus quas maxime sapiente quidem placeat eos. Deserunt, temporibus! Nobis quae quos, eaque iusto quidem consequatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, earum repellat, laboriosam animi dicta repellendus quas maxime sapiente quidem placeat eos. Deserunt, temporibus! Nobis quae quos, eaque iusto quidem consequatur!</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At atque unde deserunt eligendi excepturi soluta sint eaque animi amet saepe iste nemo incidunt dolores voluptatibus vel minima, ipsam facilis id?</p>
+</body>
+</html>

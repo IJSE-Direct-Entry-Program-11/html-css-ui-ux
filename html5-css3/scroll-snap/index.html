@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Snapping</title>
+    <style>
+        #container {
+            width: 90%;
+            height: 250px;
+            margin: auto;
+            overflow-y: scroll;
+            border: 3px solid black;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            scroll-snap-type: y mandatory;
+        }
+
+        #container::-webkit-scrollbar {
+            width: 20px;
+            /* height: 20px; */
+            background-color: #aaa; /* or add it to the track */
+        }
+
+        #container::-webkit-scrollbar-thumb {
+            background: red;
+            /* width: 5px; */
+        }
+
+        #container img {
+            width: 100%;
+            flex-shrink: 0;
+            scroll-snap-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scroll Snapping</h1>
+    <div id="container">
+        <img src="img/1.jpg">
+        <img src="img/2.png">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+    </div>
+</body>
+</html>

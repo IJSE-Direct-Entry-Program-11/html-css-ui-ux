@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .box:first-child {
+            background-color: yellow;
+        }
+
+        .box:nth-child(2) {
+            background-color: blue;
+        }
+
+        .box:nth-child(3) {
+            background-color: black;
+            color: white;
+            /* grid-column: 3 / 4;
+            grid-row: 1 / span 2; */
+            /* grid-area: 1 / 3 / span 2 / 4; */
+        }
+
+        .box:nth-child(4) {
+            background-color: red;
+            /* grid-column: 1 / span 2; */
+        }
+
+        .box:last-child {
+            background-color: aqua;
+            /* grid-column-start: -3;
+            grid-column-end: -1; */
+            /* grid-column: -3 / -1; */
+            /* grid-column: 2 / span 2; */
+        }
+
+        .box {
+            /* height: 100px; */
+        }
+
+        #container-1 {
+            display: grid;
+            /* grid-template-columns: 100px 50px 150px */
+            /* grid-template-columns: repeat(2, 100px) 200px; */
+            /* grid-template-columns: minmax(100px, 400px) 250px minmax(50px, 400px); */
+            /* grid-template-columns: repeat(3, minmax(100px, 400px)); */
+            /* grid-template-columns: repeat(3, minmax(100px, 1fr));
+            grid-template-rows: repeat(2, 50px); */
+            grid: repeat(2, 50px) / repeat(3, minmax(100px, 1fr));
+        }
+
+        #container-2 header {
+            background-color: lime;
+            grid-column: 1 / span 2;
+        }
+
+        #container-2 aside {
+            background-color: aqua;
+            grid-row: 2 / -1;
+        }
+
+        #container-2 main {
+            background-color: orange;
+        }
+
+        #container-2 footer {
+            background-color: blue;
+        }
+
+        #container-2 {
+            margin-top: 20px;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+        }   
+        
+        #container-3 header {
+            grid-area: header;
+            background-color: lime;
+        }
+
+        #container-3 aside {
+            grid-area: aside;
+            background-color: aqua;
+        }
+
+        #container-3 main {
+            grid-area: main;
+            background-color: orange;
+        }
+
+        #container-3 footer {
+            grid-area: footer;
+            background-color: blue;
+        }
+
+        #container-3 {
+            margin-top: 20px;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "aside main"
+                "aside footer";
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container-1">
+        <div class="box">First Box</div>
+        <div class="box">Second Box</div>
+        <div class="box">Third Box</div>
+        <div class="box">Fourth Box</div>
+        <div class="box">Fifth Box</div>
+    </div>
+    <div id="container-2">
+        <header>Header</header>
+        <aside>Aside</aside>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </div>
+    <div id="container-3">
+        <header>Header</header>
+        <aside>Aside</aside>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

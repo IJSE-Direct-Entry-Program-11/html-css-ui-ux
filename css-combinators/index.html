@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/469f15fedf.js" crossorigin="anonymous"></script>
+    <title>CSS Combinators</title>
+    <style>
+        #menu-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .menu-item {
+            flex: 100px 1 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .menu-item .icon:hover {
+            background-color: lightgray;
+        }
+
+        .menu-item .icon {
+            font-size: 2rem;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .menu-item .label{
+            margin-top: 5px;
+            visibility: hidden;
+        }
+
+        #li-second + li{
+            color: red;
+            font-size: 2rem;
+        }
+
+        #wrapper div + div {
+            color: blue;
+            font-size: 1.5rem;
+        }
+
+        #wrapper p + div {
+            color: green;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        #wrapper #p-third ~ p {
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+
+        h1 {
+            /* display: none; */
+            /* visibility: hidden; */
+            /* opacity: 0;  */
+            /* This creates a stacking context */
+        }
+
+        .menu-item .icon:hover + .label {
+            visibility: visible;
+        }
+
+        ol > li:not(ol > li:nth-child(2), ol > li:nth-child(3)) {
+            color: red;
+            font-weight: bold;
+        }
+
+        ol ul {
+            color: initial;
+        }
+
+        /* ol ul > li {
+            color: green;
+        } */
+    </style>
+</head>
+<body>
+    <h1>CSS Combinators</h1>
+    <ul>
+        <li>First</li>
+        <li id="li-second">Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+    </ul>
+    <div id="wrapper">
+        <p>Zero</p>
+        <div>First</div>
+        <div>Second</div>
+        <p id="p-third">Third</p>
+        <div>Fourth</div>
+        <p>Fifth</p>
+        <p>Sixth</p>
+        <div>Seventh</div>
+        <div>Eigth</div>
+        <p>Nienth</p>
+    </div>
+    <div id="menu-container">
+        <div class="menu-item">
+            <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+            <div class="label">Customers</div>
+        </div>
+        <div class="menu-item">
+            <div class="icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+            <div class="label">Items</div>
+        </div>
+        <div class="menu-item">
+            <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="label">Orders</div>
+        </div>
+        <div class="menu-item">
+            <div class="icon"><i class="fa-solid fa-file-invoice"></i></div>
+            <div class="label">Reports</div>
+        </div>
+    </div>
+    <ol>
+        <li>First</li>
+        <li>Second
+            <ul>
+                <li>Second - First</li>
+                <li>Second - Second</li>
+            </ul>
+        </li>
+        <li>Third</li>
+        <li>Fourth
+            <ul>
+                <li>Fourth - First</li>
+                <li>Fourth - Second</li>
+            </ul>
+        </li>
+        <li>Fifth</li>
+    </ol>
+</body>
+</html>
